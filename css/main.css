@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: coral;
+}
+
+header a img {
+    width: 33px;
+    margin-right: 10px;
+}
+
+.container article {
+    padding: 30px;
+    position: relative;
+    width: 80%;
+    background: aliceblue;
+    margin: 10px 5px;
+}
+
+.container article:nth-child(1) {
+    margin-top: 100px;
+}
+
+.container article h1 {
+    font-size: 2.2rem;
+    color: #81D4FA;
+}
+
+.container article p {
+    font-size: 1.2rem;
+    letter-spacing: 1;
+    line-height: 1.6;
+}
+
+.container article .id {
+    background: coral;
+    display: inline-block;
+    padding: 10px;
+    color: #ffffff;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.container article h1.a-t-s {
+    font-size: 2.2rem;
+    color: rgb(34, 16, 34);
+    width: 100%;
+    height: 20px;
+    background: rgb(70, 70, 70);
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.container article p.a-p-s {
+    width: 100%;
+    height: 50px;
+    background: rgb(70, 70, 70);
+    border-radius: 5px;
+}
+
+.container article div.a-id-s {
+    background: rgb(58, 45, 41);
+    display: inline-block;
+    padding: 10px;
+    color: #585858;
+    border-radius: 5px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.container article div.shimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+article div.shimmer span {
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+    background: rgba(255, 255, 255, .2);
+    transform: skewX(-30px);
+    filter: blur(20px);
+    animation: animate 1s linear infinite;
+}
+
+.container article.black {
+    background: rgba(0, 0, 0, .2)
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-100%);
+    }
+    100% {
+        transform: translate(200%);
+    }
+}
